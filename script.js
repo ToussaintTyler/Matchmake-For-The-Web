@@ -1,7 +1,7 @@
 document.getElementById("loveForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const desiredAnswers = [2, 5, 1, 1, 3]; // your ideal “true love” answers
+  const desiredAnswers = [2,5,1,1,3]; // your ideal “true love” answers
   const userAnswers = Array.from(document.querySelectorAll("input[type='number']")).map(input => parseInt(input.value));
   
   let totalDifference = 0;
