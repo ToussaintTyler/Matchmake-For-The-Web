@@ -21,12 +21,6 @@ document.getElementById("loveForm").addEventListener("submit", function(event) {
         }
       });
 
-      if (!valid) {
-        resultDiv.textContent = "⚠️ Please fix the errors above before continuing.";
-        resultDiv.style.color = "red";
-        return;
-      }
-
 let totalDifference = 0;
       let summaryHTML = "<div class='score-summary'><h3>💬 Question Breakdown</h3><ul>";
       for (let i = 0; i < desiredAnswers.length; i++) {
