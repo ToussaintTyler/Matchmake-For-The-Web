@@ -12,7 +12,7 @@ document.getElementById("loveForm").addEventListener("submit", function(event) {
   const compatibility = Math.max(0, 100 - totalDifference * 5); // max = 100, min = 0
 
   let message = "";
-  if (compatibility >= 85) {
+  if (compatibility >= 80) {
     message = `💖 Score: ${compatibility}% — We’re soulmates! ❤️`;
   } else if (compatibility >= 60) {
     message = `😊 Score: ${compatibility}% — We could be great friends!`;
