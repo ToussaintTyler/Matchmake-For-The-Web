@@ -61,3 +61,17 @@ button:hover {
   font-size: 1.2em;
   font-weight: bold;
 }
+
+.score-summary {
+      text-align: left;
+      margin-top: 20px;
+      background: #fff0f5;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
