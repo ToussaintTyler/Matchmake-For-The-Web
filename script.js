@@ -22,14 +22,13 @@ document.getElementById("loveForm").addEventListener("submit", function(event) {
       });
 
 let totalDifference = 0;
-      let summaryHTML = "<div class='score-summary'><h3>💬 Question Breakdown</h3><ul>";
+    
       for (let i = 0; i < desiredAnswers.length; i++) {
         const diff = Math.abs(desiredAnswers[i] - userAnswers[i]);
         const questionScore = 20 - (diff * 4); // Each question worth max 20 points
         totalDifference += diff;
         summaryHTML += `<li>Question ${i + 1}: Your answer = ${userAnswers[i]}, Ideal = ${desiredAnswers[i]} → Compatibility: ${questionScore}%</li>`;
       }
-      summaryHTML += "</ul></div>";
 
   const compatibility = Math.max(0, 100 - totalDifference * 5); // max = 100, min = 0
 
@@ -42,12 +41,5 @@ let totalDifference = 0;
     message = `😬 Score: ${compatibility}% — Uh oh… better run away! 🏃‍♂️💨`;
   }
 
-    resultDiv.style.color = "black";
-      resultDiv.innerHTML = `
-        ${summaryHTML}
-        <p><strong>Overall Compatibility Score: ${totalCompatibility}%</strong></p>
-        <p>${remark}</p>
-      `;
-  
   document.getElementById("result").innerHTML = message;
 });
