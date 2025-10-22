@@ -42,5 +42,12 @@ let totalDifference = 0;
     message = `😬 Score: ${compatibility}% — Uh oh… better run away! 🏃‍♂️💨`;
   }
 
+    resultDiv.style.color = "black";
+      resultDiv.innerHTML = `
+        ${summaryHTML}
+        <p><strong>Overall Compatibility Score: ${totalCompatibility}%</strong></p>
+        <p>${remark}</p>
+      `;
+  
   document.getElementById("result").innerHTML = message;
 });
