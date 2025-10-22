@@ -1,7 +1,7 @@
 document.getElementById("loveForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const desiredAnswers = [5, 2, 5, 4, 3]; // your ideal “true love” answers
+  const desiredAnswers = [4, 5, 5, 1, 3]; // your ideal “true love” answers
   const userAnswers = Array.from(document.querySelectorAll("input[type='number']")).map(input => parseInt(input.value));
   
   let totalDifference = 0;
@@ -17,7 +17,7 @@ document.getElementById("loveForm").addEventListener("submit", function(event) {
   } else if (compatibility >= 60) {
     message = `😊 Score: ${compatibility}% — We could be great friends!`;
   } else {
-    message = `😬 Score: ${compatibility}% — Uh oh… better run away! 🏃‍♂️💨`;
+    message = `😬 Score: ${compatibility}% — Nope… better run away! 🏃‍♂️💨`;
   }
 
   document.getElementById("result").innerHTML = message;
